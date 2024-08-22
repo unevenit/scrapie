@@ -3,13 +3,15 @@ package config
 import (
 	"encoding/json"
 	"io/ioutil"
+
+	"github.com/unevenit/scrapie/utils"
 )
 
 type ScrapeConfig struct {
-	URL           string            `json:"url"`
-	Method        string            `json:"method"`
-	Headers       map[string]string `json:"headers"`
-	DataSelectors map[string]string `json:"data_selectors"`
+	URL           string                        `json:"url"`
+	Method        string                        `json:"method"`
+	Headers       map[string]string             `json:"headers"`
+	DataSelectors map[string]utils.DataSelector `json:"data_selectors"`
 }
 
 func LoadConfig(filePath string) (*ScrapeConfig, error) {

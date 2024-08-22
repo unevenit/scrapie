@@ -27,7 +27,7 @@ func (s *BaseScraper) Scrape() (map[string]string, error) {
 		return nil, err
 	}
 
-	log.Printf("Response received: %s", response)
+	//log.Printf("Response received: %s", response)
 
 	parsedData, err := utils.ParseResponse(response, s.config.DataSelectors)
 	if err != nil {
