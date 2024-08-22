@@ -1,0 +1,10 @@
+{
+    "url": "https://example.com",
+    "method": "GET",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (compatible; scrapie/1.0)"
+    },
+    "data_selectors": {
+        "title": "title"
+    }
+}
